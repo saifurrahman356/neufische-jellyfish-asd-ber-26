@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { whosOnline, type User } from "../src/day1/whosOnline";
+import { whosOnline, type User } from "../../src/day1/whosOnline";
 
 describe("whosOnline", () => {
   it("returns empty groups when there are no users", () => {
