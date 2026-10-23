@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { stringOrder } from "../../src/day1/stringOrder";
+import { stringOrder } from "../../src/day1-welcome/stringOrder";
 
 describe("stringOrder", () => {
   it("sorts words by their numbers", () => {
