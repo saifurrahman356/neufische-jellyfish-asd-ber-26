@@ -14,12 +14,35 @@ export interface Playlist {
   films: Film[];
 }
 
-export function formatFilm(film: Film): string {
-  const status = film.watched ? "Watched" : "Not watched";
-  const rating = film.rating !== undefined ? `Rating: ${film.rating}` : "";
-  return `${film.title} (${film.year}) - ${status}${rating}`;
+export interface Category {
+  name: string;
+  description?: string;
 }
 
-export function getWatched(playlist: Playlist): Film[] {
-  return playlist.films.filter((f) => f.watched === false);
+export interface Product {
+  readonly id: number;
+  name: string;
+  price: number;
+  stock: number;
+  category: Category;
+}
+
+export interface Customer {
+  readonly id: number;
+  name: string;
+  email: string;
+}
+
+export interface LineItem {
+  product: Product;
+  quantity: number;
+}
+
+export type OrderStatus = "pending" | "confirmed" | "shipped";
+
+export interface Order {
+  readonly id: number;
+  customer: Customer;
+  items: LineItem[];
+  status: OrderStatus;
 }

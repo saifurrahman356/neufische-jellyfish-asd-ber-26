@@ -1,4 +1,5 @@
-import { formatFilm, getWatched, type Playlist } from "./types.js";
+import { formatFilm, getWatched } from "./utils/film-utils.js";
+import type { Playlist } from "./types.js";
 
 const myPlaylist: Playlist = {
   name: "My Favorite Films",
