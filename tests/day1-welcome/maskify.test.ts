@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { maskify } from "../../src/day1/maskify";
+import { maskify } from "../../src/day1-welcome/maskify";
 
 describe("maskify", () => {
   it("masks all but the last four characters", () => {
